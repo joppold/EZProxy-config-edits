@@ -895,9 +895,9 @@ DJ pedsurglibrary.com
 # Added per TB
 # Moved above JSTOR per JD on 2022-03-22
 # Moved above American Heart Association 2022-04-28
-# Updated 2023-10-18 per JDurbin
+# Updated 2024-05-17 per JDurbin
 AnonymousURL +*
-Title -hide CookieLaw (OCLC IncludeFile updated 20231017)
+Title -hide CookieLaw atoz
 HTTPHeader -Request -process Sec-*
 HTTPHeader -Response -process CF-*
 HTTPHeader -Response -process Expect-CT
@@ -905,15 +905,59 @@ URL https://cdn.cookielaw.org
 DJ cookielaw.org
 DJ cookiepro.com
 DJ onetrust.com
+Find domain=."+a[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+b[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+c[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+d[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+e[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+f[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+g[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+h[0]+"
+Replace domain="[+location.hostname+"
 Find domain=."+i[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+j[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+k[0]+"
 Replace domain="+location.hostname+"
 Find domain=."+l[0]+"
 Replace domain="+location.hostname+"
-Find domain=."+a[0]+"
+Find domain=."+m[0]+"
 Replace domain="+location.hostname+"
-Find "bmj.com"
-Replace "^H"
+Find domain=."+n[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+o[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+p[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+q[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+r[0]+"
+Replace domain="+location.hostname+"
 Find domain=."+s[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+s[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+t[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+u[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+v[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+w[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+x[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+y[0]+"
+Replace domain="+location.hostname+"
+Find domain=."+z[0]+"
 Replace domain="+location.hostname+"
 AnonymousURL -*
 
@@ -1328,8 +1372,13 @@ T Lexicomp Online for Dentistry
 U https://online.lexi.com/lco/action/home?siteid=985&reauth 
 DJ online.lexi.com
 
-#
-Title Karger Publishers (updated 20171108)
+#  Updated 2024-05-17 per JDurbin
+AnonymousURL +https://kit.fontawesome.com/*.js
+AnonymousURL +https://kit.fontawesome.com/*.css
+AnonymousURL +https://ka-p.fontawesome.com/releases/*.css*
+AnonymousURL +https://ka-p.fontawesome.com/releases/*.woff*
+AnonymousURL +https://ka-p.fontawesome.com/releases/*.tff*
+Title Karger Publishers (updated 20231129)
 URL https://www.karger.com
 HJ http://www.karger.com
 HJ content.karger.ch
@@ -1345,12 +1394,14 @@ HJ online.karger.com
 HJ search.karger.com
 HJ www.karger.ch
 HJ www.karger.com
+HJ https://kit.fontawesome.com
+HJ kit.fontawesome.com
+HJ ka-p.fontawesome.com
+HJ https://ka-p.fontawesome.com
 DJ mag.digitalpc.co.uk
 DJ karger.com
-DJ karger.ch 
-# T Karger
-# U http://www.karger.com
-# D karger.com
+DJ karger.ch
+AnonymousURL -*
 
 T Natural Standard
 U http://indianau.naturalstandard.com
@@ -1385,21 +1436,72 @@ DJ pubget.com
 
 #old URL - remove after 5/1/14
 #  RadioGraphics
+#  Edited 2024-05-17 per JDurbin#  RadioGraphics
 #  Radiology
-T Radiological Society of North America
-U http://radiographics.rsna.org
-U http://radiology.rsna.org
-U http://pubs.rsna.org
+Title Radiological Society of North America (updated 20211029)
+URL http://pubs.rsna.org
+HJ https://pubs.rsna.org
+HJ intl-radiology.rsna.org
+HJ pubs.rsna.org
+HJ radiographics.rsna.org
+HJ radiographics.rsnajnls.org
+HJ radiology.rsna.org
+HJ radiology.rsnajnls.org
+HJ rsna.org
+HJ rsnajnls.org
+HJ www.rsna.org
+HJ www.rsnajnls.org
+HJ www2.rsna.org
 DJ rsna.org
+DJ rsnajnls.org
 
-# updated 10/13/17 per TB:
-T Microbiology Society
-U http://www.microbiologyresearch.org
+# updated 2024-05-17 per JDurbin:
+Title Microbiology Society Journals (updated 20190311)
+URL http://www.microbiologyresearch.org
+HJ https://ijs.microbiologyresearch.org
+HJ https://jgv.microbiologyresearch.org
+HJ https://jmm.microbiologyresearch.org
+HJ https://jmmcr.microbiologyresearch.org
+HJ https://mgen.microbiologyresearch.org
+HJ https://mic.microbiologyresearch.org
 HJ https://microbiologyresearch.org
+HJ https://microbiologysociety.org
+HJ https://sgmjournals.org
+HJ https://vir.microbiologyresearch.org
 HJ https://www.microbiologyresearch.org
+HJ https://www.microbiologysociety.org
+HJ https://www.sgmjournals.org
+HJ ijs.microbiologyresearch.org
+HJ ijs.sgmjournals.org
+HJ ijsb.sgmjournals.org
+HJ intl-ijs.sgmjournals.org
+HJ intl-jmm.sgmjournals.org
+HJ intl-jmmcr.sgmjournals.org
+HJ intl-mic.sgmjournals.org
+HJ intl-vir.sgmjournals.org
 HJ jgv.microbiologyresearch.org
-HJ mic.microbiologyresearch.org
+HJ jgv.sgmjournals.org
 HJ jmm.microbiologyresearch.org
+HJ jmm.sgmjournals.org
+HJ jmmcr.microbiologyresearch.org
+HJ jmmcr.sgmjournals.org
+HJ mgen.microbiologyresearch.org
+HJ mgen.sgmjournals.org
+HJ mic.microbiologyresearch.org
+HJ mic.sgmjournals.org
+HJ microbiologyresearch.org
+HJ microbiologysociety.org
+HJ sgmjournals.org
+HJ vir.microbiologyresearch.org
+HJ vir.sgmjournals.org
+HJ www.microbiologyresearch.org
+HJ www.microbiologysociety.org
+HJ www.sgmjournals.org
+HJ www.socgenmicrobiol.org.uk
+DJ microbiologyresearch.org
+DJ sgmjournals.org
+DJ socgenmicrobiol.org.uk
+
 
 T Society for Neuroscience
 U http://www.jneurosci.org
@@ -1479,16 +1581,25 @@ DJ future-science.com
 #
 #  ATLA Religion Database
 #  ATLA Religion Database With Serials
-#  Updated 8/17/06 per notification from EBSCO and KP -- JWE
+#  Updated 2024-05-17
 #
-T  ATLA Religion Database
-U  http://search.atlaonline.com
-# DJ 63.136.1.22           
-DJ atlasprime.atla.com
-# DJ 63.136.1.23           
+Title ATLA Religion and ATLA Serials (ATLAS) (updated 20160919)
+URL http://search.atlaonline.com
+Domain atlaonline.com
+# ATLA previously pointed its URLs to purl.org. This
+# "Host purl.org" insures that if any sites have starting
+# point URLs that point to purl.org, they will continue to work
+HJ purl.org
+Host 63.136.1.22
+Host 63.136.1.23
+# The 66. hosts may no longer be needed, but this has not been verified
+# and their presence will not impair functionality
+HJ 66.77.30.29
+HJ 66.77.43.9       
+DJ atlasprime.atla.com       
 DJ atlasstandby.atla.com
 DJ atlaonline.com      
-DJ purl.org            
+DJ purl.org      
 
 T Encyclopedia Britannica
 U http://search.eb.com
@@ -1601,9 +1712,9 @@ D accuweather.ap.org
 
 # Add per TB for troubleshooting
 # 2020-07-02
+# Updated 2024-05-17 per JDurbin
 Option DomainCookieOnly
-Title American College of Physicians (updated 20200519)
-# Annals of Internal Medicine
+Title American College of Physicians (updated 20200810)
 URL https://acpjournals.org
 HJ acpjournals.org
 HJ acphospitalist.org
@@ -1617,11 +1728,13 @@ HJ https://acponline.org
 HJ https://annals.org
 HJ https://www.acphospitalist.org
 HJ https://www.acpinternist.org
+HJ https://www.acpjournals.org
 HJ https://www.acponline.org
 HJ https://www.annals.org
 HJ www.acphospitalist.org
 HJ www.acpinternist.org
 HJ www.acpjc.org
+HJ www.acpjournals.org
 HJ www.acponline.org
 HJ www.annals.org
 DJ acpjournals.org
@@ -1772,22 +1885,21 @@ U http://journals.aps.org
 U https://journals.aps.org
 D aps.org
 
-#  revised 11/15/10 per JJ
-#  revised 12/4/17 per JJ
-#  updated 1/8/18 per KP
-T American Society of Civil Engineers (ASCE)
-U http://www.ascelibrary.org
-U https://www.ascelibrary.org
-U http://ascelibrary.org
-U https://ascelibrary.org
-U http://www.asce.org
-U https://www.asce.org
-U http://asce.org
-U https://asce.org
+#  updated 2024-05-17 per JDurbin
+Title American Society of Civil Engineers (updated 20200619)
+URL https://ascelibrary.org
+HJ https://asce.org
+HJ https://ascelibrary.org
+HJ https://www.asce.org
+HJ https://www.ascelibrary.org
+HJ https://www.cedb.asce.org
+HJ asce.org
+HJ ascelibrary.org
 HJ cedb.asce.org
+HJ www.asce.org
+HJ www.ascelibrary.org
 DJ asce.org
 DJ ascelibrary.org
-
 #
 #  ARBA Online
 #  (from Greenwood Publishing Group (GPG), an imprint of ABC-Clio)
@@ -1866,28 +1978,34 @@ IncludeFile includes/web.of.knowledge.stanza
 #
 #  Updated Artstor configuration per OCLC, 6/8/15:
 #  http://www.oclc.org/support/services/ezproxy/documentation/db/artstor.en.html
-#  Updated 2020-05-08
+#  Updated 2024-05-17
 #
-Title ARTstor Digital Library (ADL) (updated 20200218)
+Title ARTstor Digital Library (ADL) (updated 20201204)
 HTTPHeader -request -process X-*
 HTTPHeader -request -process Accept-Encoding
 HTTPHeader -request -process Access-Control-Allow-Origin
-HTTPMethod -request -process PUT
-HTTPMethod -request -process PATCH
-HTTPMethod -request -process HEAD
-HTTPMethod -request -process OPTIONS
-HTTPMethod -request -process DELETE
+HTTPMethod PUT
+HTTPMethod PATCH
+HTTPMethod OPTIONS
+HTTPMethod DELETE
 AnonymousUrl +.jar
 AnonymousUrl +.class
 AnonymousUrl +.gif
 AnonymousUrl +.jpg
-U https://library.artstor.org
-DJ artstor.org
-DJ mdxdv.artstor.org
+URL https://library.artstor.org
+HJ library.artstor.org
 HJ https://tsprod.artstor.org
 HJ https://mdxdv.artstor.org
+HJ https://www.artstor.org
+HJ www.artstor.org
+DJ artstor.org
+DJ mdxdv.artstor.org
 Find //tsprod
 Replace https://tsprod
+Find https&#x3A;&#x2F;&#x2F;www.artstor.org
+Replace https&#x3A;&#x2F;&#x2F;^swww.artstor.org^
+Find http&#x3A;&#x2F;&#x2F;library.artstor.org
+Replace http&#x3A;&#x2F;&#x2F;^plibrary.artstor.org^
 NeverProxy tsprod.artstor.org
 NeverProxy kaltura.artstor.org
 NeverProxy kts.artstor.org
@@ -2005,17 +2123,26 @@ T E*Subscribe--ERIC Documents Online
 U http://www.edrs.com
 D edrs.com
 
-#  updated for ssireview 12/9/15 per KP
-T Stanford University
-#  following redirects to home.highwire.org (probably obsolete):
-U http://highwire.stanford.edu
-U http://www.ssireview.org
-U http://www.stanford.edu
-U https://www.stanford.edu
-U http://stanford.edu
-U https://stanford.edu
-D ssireview.org
-D stanford.edu
+#  updated 2024-05-17
+#  Title Changed from Stanford University
+Title Highwire Press (updated 20230110)
+URL https://www.highwirepress.com/
+HJ highwire.org
+HJ highwire.stanford.edu
+HJ highwirepress.com
+HJ home.highwire.org
+HJ https://highwirepress.com
+HJ https://plato.stanford.edu
+HJ https://www.highwire.org
+HJ https://www.highwirepress.com
+HJ openurl.highwire.org
+HJ plato.stanford.edu
+HJ www.highwire.org
+HJ www.highwirepress.com
+HJ https://portal.highwire.org
+HJ portal.highwire.org
+DJ highwirepress.com
+DJ stanford.edu
 
 #  updated to OCLC stanza 1/23/19
 # T Institute of Physics (IOP) Publications
