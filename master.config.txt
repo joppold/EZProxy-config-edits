@@ -2388,21 +2388,32 @@ IncludeFile includes/clinicalkey.txt
 
 
 
-#  updated 3/15/2018 JE per RL
-T Ingenta
-U http://ariel.ingentaselect.com
-U http://openurl.ingenta.com
-U http://www.ingenta.com
-U http://www.ingentaconnect.com  
-U http://www.ingentaselect.com  
-U https://ariel.ingentaselect.com
-U https://openurl.ingenta.com
-U https://www.ingenta.com
-U https://www.ingentaconnect.com  
-U https://www.ingentaselect.com  
+#  updated 2024-05-18 per JDurbin
+Title INGENTAconnect (updated 20200722)
+URL http://www.ingentaconnect.com/
+HJ https://www.ingentaconnect.com
+HJ https://openurl.ingenta.com
+HJ openurl.ingenta.com
+HJ pi2.ingenta.com
+HJ ingenta.com
+HJ https://www.ingenta.com
+HJ https://ingenta.com
+HJ www.ingenta.com
 DJ ingenta.com
+HJ api.ingentaconnect.com
+HJ www.ingentaconnect.com
+HJ charleston.publisher.ingentaconnect.com
+HJ brill.publisher.ingentaconnect.com
+HJ publisher.ingentaconnect.com
+HJ miranda.ingentaselect.com
+HJ iris.ingentaselect.com
+HJ berghahn.publisher.ingentaconnect.com
+HJ gsegol.publisher.ingentaconnect.com
+HJ ingentaconnect.com
 DJ ingentaconnect.com
-DJ ingentaselect.com
+HJ www.publishingtechnology.com
+HJ publishingtechnology.com
+DJ publishingtechnology.com
 
 #  Edited 2022-08-15 per JDurbin
 Title The MIT Press Direct (updated 20210607) 
@@ -2474,28 +2485,18 @@ T Psycinfo
 U http://www.psycinfo.com
 D psycinfo.com
 
-Title American Physiological Society (updated 20200106)
-URL https://www.physiology.org
-HJ http://www.physiology.org
-HJ www.physiology.org/
-HJ physiology.org
-HJ https://physiology.org
-HJ journals.physiology.org
-HJ https://journals.aps.org
-HJ journals-aps-org
-HJ https://journals.physiology.org
-HJ www.the-aps.org
-HJ https://www.the-aps.org
-HJ https://d2avczb82rh8fa.cloudfront.net
+#  Updated 2024-05-18 per JDurbin
+Title American Physiological Society (updated 20211214)
+URL https://journals.physiology.org
 HJ d2avczb82rh8fa.cloudfront.net
+HJ https://d2avczb82rh8fa.cloudfront.net
+HJ https://journals.physiology.org
+HJ https://physiology.org
+HJ https://www.physiology.org
+HJ journals.physiology.org
+HJ physiology.org
+HJ www.physiology.org
 DJ physiology.org
-DJ the-aps.org
-DJ aps.org
-#T American Journal of Physiology
-#U http://ajpcell.physiology.org
-#U http://jap.physiology.org
-#U http://jn.physiology.org
-#D physiology.org
 
 # For problems with the proxy dropping when downloading PDFs:
 Find physiology.org\/sites
@@ -2507,23 +2508,23 @@ T Blackwell Synergy
 U http://www.blackwell-synergy.com
 D blackwell-synergy.com
 
-# 5/12/11 BB 
-T University of Illinois Press
-U http://ajp.press.uiuc.edu
-U http://apq.press.uiuc.edu
-U http://apq.press.uillinois.edu
-U https://apq.press.uillinois.edu
-U http://edfu.lis.uiuc.edu
-U http://hpq.press.uiuc.edu
-U http://hpq.press.uillinois.edu
-U https://hpq.press.uillinois.edu
-U http://sppq.press.uiuc.edu 
-# U http://hpq.press.illinois.edu
-U http://www.press.uillinois.edu
-U https://www.press.uillinois.edu
-D uiuc.edu 
-# D illinois.edu
-D uillinois.edu
+# Updated 2024-05-18 per JDurbin 
+Title University of Illinois Press (updated 20200515)
+URL https://www.press.uillinois.edu
+HJ apq.press.uillinois.edu
+HJ hpq.press.uillinois.edu
+HJ press.uillinois.edu
+HJ www.press.uillinois.edu
+HJ apq.press.illinois.edu
+HJ hpq.press.illinois.edu
+HJ https://paq.press.uillinois.edu
+HJ paq.press.uillinois.edu
+HJ press.illinois.edu
+HJ https://paq.press.uillinois.edu
+HJ paq.press.uillinois.edu
+HJ www.press.illinois.edu
+DJ illinois.edu
+DJ uillinois.edu
 
 T American Journal of Sports Medicine
 U http://journal.ajsm.org
@@ -2699,51 +2700,71 @@ T Annals of General Hospital Psychiatry
 U http://www.general-hospital-psychiatry.com
 D general-hospital-psychiatry.com
 
-# updated 2/19/18 per JJ
-T Annual Reviews
-U http://astro.annualreviews.org
-U https://astro.annualreviews.org
-U http://ecolsys.annualreviews.org
-U https://ecolsys.annualreviews.org
-U http://energy.annualreviews.org
-U https://energy.annualreviews.org
-U http://fluid.annualreviews.org
-U https://fluid.annualreviews.org
-U http://nucl.annualreviews.org
-U https://nucl.annualreviews.org
-U http://arjournals.annualreviews.org
-U https://arjournals.annualreviews.org
-U http://plant.annualreviews.org
-U https://plant.annualreviews.org
-U http://biochem.annualreviews.org
-U https://biochem.annualreviews.org
-U http://bioeng.annualreviews.org
-U https://bioeng.annualreviews.org
-U http://biophys.annualreviews.org
-U https://biophys.annualreviews.org
-U http://cellbio.annualreviews.org
-U https://cellbio.annualreviews.org
-U http://genet.annualreviews.org
-U https://genet.annualreviews.org
-U http://genom.annualreviews.org
-U https://genom.annualreviews.org
-U http://immunol.annualreviews.org
-U https://immunol.annualreviews.org
-U http://nutr.annualreviews.org
-U https://nutr.annualreviews.org
-U http://pharmtox.annualreviews.org
-U https://pharmtox.annualreviews.org
-U http://physiol.annualreviews.org
-U https://physiol.annualreviews.org
-U http://psych.annualreviews.org
-U https://psych.annualreviews.org
-U http://publhealth.annualreviews.org
-U https://publhealth.annualreviews.org
-U http://annualreviews.org
-U https://annualreviews.org
-U http://www.annualreviews.org
-U https://www.annualreviews.org
+# Updated 2024-05-18 per JDurbin
+Title Annual Reviews (updated 20211214)
+URL https://www.annualreviews.org/
+HJ anchem.annualreviews.org
+HJ animal.annualreviews.org
+HJ annualreviews.org
+HJ anthro.annualreviews.org
+HJ arcompsci.annualreviews.org
+HJ arjournals.annualreviews.org
+HJ arplant.annualreviews.org
+HJ astro.annualreviews.org
+HJ biochem.annualreviews.org
+HJ biodatasci.annualreviews.org
+HJ bioeng.annualreviews.org
+HJ biophys.annualreviews.org
+HJ cancerbio.annualreviews.org
+HJ cellbio.annualreviews.org
+HJ chembioeng.annualreviews.org
+HJ clinpsy.annualreviews.org
+HJ conmatphys.annualreviews.org
+HJ control.annualreviews.org
+HJ criminol.annualreviews.org
+HJ devpsych.annualreviews.org
+HJ earth.annualreviews.org
+HJ ecolsys.annualreviews.org
+HJ economics.annualreviews.org
+HJ energy.annualreviews.org
+HJ ento.annualreviews.org
+HJ financial.annualreviews.org
+HJ fluid.annualreviews.org
+HJ food.annualreviews.org
+HJ genet.annualreviews.org
+HJ genom.annualreviews.org
+HJ http://www.annualreviews.org
+HJ https://annualreviews.org
+HJ https://arplant.annualreviews.org
+HJ immunol.annualreviews.org
+HJ knowablemagazine.org
+HJ lawsocsci.annualreviews.org
+HJ linguistics.annualreviews.org
+HJ marine.annualreviews.org
+HJ matsci.annualreviews.org
+HJ med.annualreviews.org
+HJ micro.annualreviews.org
+HJ neuro.annualreviews.org
+HJ nucl.annualreviews.org
+HJ nutr.annualreviews.org
+HJ orgpsych.annualreviews.org
+HJ pathmechdis.annualreviews.org
+HJ pharmtox.annualreviews.org
+HJ physchem.annualreviews.org
+HJ physiol.annualreviews.org
+HJ phyto.annualreviews.org
+HJ plant.annualreviews.org
+HJ polisci.annualreviews.org
+HJ psych.annualreviews.org
+HJ publhealth.annualreviews.org
+HJ resource.annualreviews.org
+HJ soc.annualreviews.org
+HJ statistics.annualreviews.org
+HJ virology.annualreviews.org
+HJ vision.annualreviews.org
+HJ www.annualreviews.org
 DJ annualreviews.org
+DJ knowablemagazine.org
 
 #
 # RLG (now merged with OCLC--what is/was this?  Links are broken on the OCLC site) 
@@ -3011,10 +3032,9 @@ T Colibri
 U http://colibri.let.ruu.nl
 D let.ruu.nl
 
-# Updated 2023-11-29 per JDurbin
-Title National Council of Teachers of English (NCTE) (updated 20231129)
+# Updated 2024-05-18 per JDurbin
+Title National Council of Teachers of English (20240411)
 URL http://www.ncte.org/
-HJ https://publicationsncte.org
 HJ https://cccc.ncte.org
 HJ https://library.ncte.org
 HJ https://ncte.org
@@ -3022,12 +3042,15 @@ HJ https://secure.ncte.org
 HJ https://status.ncte.org
 HJ https://www.ncte.org
 HJ https://www2.ncte.org
+HJ https://publicationsncte.org
+HJ publicationsncte.org
 HJ cccc.ncte.org
 HJ library.ncte.org
 HJ ncte.org
 HJ status.ncte.org
 HJ www.ncte.org
 HJ www2.ncte.org
+DJ publicationsncte.org
 DJ ncte.org
 Neverproxy apiv2.ncte.org
 
@@ -3186,14 +3209,15 @@ T Economic Geography
 U http://www.clarku.edu 
 D clarku.edu
 
-#  Added 5/19/09 per AJS
+#  Added 2009-05-19 per AJS
+#  Updated 2024-05-18 per JDurbin
 # EditLib Education & Information Technology Library
-T LearnTechLib (The Learning & Technology Library)
-U http://editlib.org
-U http://www.editlib.org
-U http://learntechlib.org
-U http://www.learntechlib.org
-DJ editlib.org
+Title Learning and Technology Library (updated 20210826)
+URL http://www.learntechlib.org
+HJ www.learntechlib.org
+HJ https://www.learntechlib.org
+HJ learntechlib.org
+HJ https://learntechlib.org
 DJ learntechlib.org
 
 #  Updated 2023-07-20 per JDurbin
@@ -3225,15 +3249,19 @@ D louisiana.edu
 
 #
 #  Project Muse Journals (** DO NOT DELETE **)
-#  Updated 3/11/13 KP (per Project Muse announcement)
-#  update 3/11/15 per Muse announcement/RL 
+#  Updated 2013-03-11 KP (per Project Muse announcement)
+#  Update 2015-03-11 per Muse announcement/RL
+#  Updated 2024-05-18 per JDurbin 
 #
-T Project Muse
-# U http://muse.uq.edu.au
-U http://muse.jhu.edu
-U https://muse.jhu.edu
-D jhu.edu
-# D muse.uq.edu.au
+Option DomainCookieOnly
+Title Project Muse (updated 20190905)
+URL http://muse.jhu.edu/
+HJ https://muse.jhu.edu
+HJ http://www.muse.jhu.edu
+HJ muse.uq.edu.au
+HJ https://muse.uq.edu.au
+DJ muse.jhu.edu
+Option Cookie
 
 T Encyclopedia of Life Sciences
 U http://www.els.net
@@ -3279,13 +3307,14 @@ T Evolutionary Ecology Research
 U http://www.evolutionary-ecology.com
 D evolutionary-ecology.com
 
-#  updated 202307-20 per JDurbin
+#  Updated 2024-05-18 per JDurbin
 ProxyHostnameEdit global.factiva.com$ global-factiva-com
-Title Factiva (OCLC IncludeFile updated 20230720)
+AnonymousURL +*//api.dowjones.com/*
+Title Factiva (updated 20231218)
 HTTPHeader -request -process credentials
 HTTPHeader -request -process preferences
 HTTPHeader -request -process product
-URL https://global.factiva.com/en/sess/login.asp?xsid=[S000XVm0XmnNdmnMDIpODIqNTYm5DByMU38ODJ9RcyqUUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUEA]
+URL https://global.factiva.com/en/sess/login.asp?xsid=[PLACE-XSID-HERE]
 HJ www.factiva.com
 DJ factiva.com
 DJ wsj.com
@@ -3307,30 +3336,44 @@ Replace name="landingPage" value="http://^A
 Find name="targetsite" value="http://
 Replace name="targetsite" value="http://^A
 NeverProxy widgets.dowjones.com
-NeverProxy api.dowjones.com
 NeverProxy types.factiva.com
 NeverProxy utilityhandlers.dowjones.com
+AnonymousURL -*
 
 #  Revised F1000 Faculty of 1000 stanza per
-#  vendor announcement 11/20/17
-#  Updated jwe 11/21/17
-T F1000 Faculty of 1000
-#
-#  Old F1000 URLs which now redirect to f1000.com:
-U http://posters.f1000.com
-U http://www.facultyof1000.com
-U http://www.f1000biology.com
-U http://www.f1000medicine.com
-#
-U http://www.f1000.com
-U http://f1000.com
-H https://www.f1000.com
-H https://f1000.com
+#  vendor announcement 2017-11-20
+#  Updated 2017-11-21 per jwe
+#  Updated 2024-05-18 per JDurbin
+HTTPMethod DELETE
+HTTPMethod OPTIONS
+HTTPMethod PATCH
+HTTPMethod PUT
+Title Faculty Opinions (formerly F1000) (updated 20220513)
+ProxyHostnameEdit facultyopinions.com$ facultyopinions
+ProxyHostnameEdit sciwheel.com$ sciwheel
+URL https://facultyopinions.com
+HJ facultyopinions.com
+HJ sciwheel.com
 HJ f1000.com
+HJ https://facultyopinions.com
+HJ https://sciwheel.com
+HJ https://f1000.com
+HJ https://www.facultyopinions.com
+HJ https://www.sciwheel.com
+HJ https://www.f1000.com
+HJ www.facultyopinions.com
+HJ www.sciwheel.com
+HJ www.f1000.com
+DJ facultyopinions.com
+DJ sciwheel.com
 DJ f1000.com
-D f1000workspace.com
-HJ f1000research.com
-DJ f1000research.com
+NeverProxy api.f1000.com
+NeverProxy api.sciwheel.com
+NeverProxy app.f1000.com
+NeverProxy app.sciwheel.com
+NeverProxy messaging.f1000.com
+NeverProxy messaging.sciwheel.com
+NeverProxy badge.facultyopinions.com
 
 T Family Index
 U http://www.famindx.com
@@ -3387,16 +3430,27 @@ D globalbooksinprint.com
 
 
 
-#  3/26/09
-T Harvard Education Publishing Group
-U http://www.edreview.org
-U http://her.hepg.org
-U http://hepgjournals.org
-U http://www.hepg.org
-U http://hepg.org
-DJ edreview.org
+#  2009-03-26
+#  Updated 2024-05-18 per JDurbin
+Title Harvard Education Publishing Group (updated 20190410)
+URL http://hepgjournals.org/
+HJ hepgjournals.org
+HJ hepg.org
+HJ www.hepgjournals.org
+HJ https://www.hepgjournals.org
+HJ www.hepg.org
+HJ https://www.hepg.org
 DJ hepgjournals.org
+HJ her.hepg.org
 DJ hepg.org
+HJ pinnacle.allenpress.com
+DJ allenpress.com
+HJ www.edreview.org
+HJ edreview.org
+DJ edreview.org
+HJ www.hepinc.com
+HJ hepinc.com
+DJ hepinc.com
 
 T Homeland Security Digital Library
 U http://hsdl.org
