@@ -3832,14 +3832,15 @@ NeverProxy https://cdnjs.cloudflare.com
 NeverProxy https://cdn.cabi.org
 NeverProxy https://api.cabi.org
 
-
+#  Updated 2024-05-20 per JDurbin
 Option DomainCookieOnly
-Title CABI digital library (updated 20220610)
+Title CABI digital library (updated 20231006)
 URL https://cabidigitallibrary.org
-HJ https://cabidigitallibrary.org
 HJ cabidigitallibrary.org
 HJ https://tourism.cabi.org
+HJ https://www.cabidigitallibrary.org
 HJ tourism.cabi.org
+HJ www.cabidigitallibrary.org
 DJ cabidigitallibrary.org
 Option Cookie
 
@@ -3912,16 +3913,14 @@ T MarketLine
 U http://www.marketlineinfo.com
 DJ marketlineinfo.com
 
-# Added 7-31-2012 by AJS per KP
-# T Marketline Advantage
-# U http://advantage.marketline.com
-# D marketline.com
-#  
-#  updated 2/1/2019 per RL
-Title MarketLine Advantage
+#  Added 2012-07-31 by AJS per KP
+#  Updated 2024-05-20 per JDurbin
+Title MarketLine Advantage (updated 20190409)
 URL http://advantage.marketline.com
 HJ advantage.marketline.com
 HJ https://advantage.marketline.com
+HJ https://new.marketline.com
+HJ new.marketline.com
 DJ marketline.com
 
 # per KP, 1/10/11
@@ -4179,117 +4178,103 @@ U https://www.rep.routledge.com
 D routledgehistoricalresources.com
 D routledge.com
 
-#
-#  Standard & Poor's Netadvantage
-#  1/12/09: Includes Compustat Excel Analytics
-#  12/9/09: URL changed from www.netadvantage.sandp.com
-#  updated 8/31/16 per JJ
-#
-#  added ciqimg.com 11/4/16 JE
-#  Note: As of this date, OCLC does not provide a recommended 
-#  stanza for this resource.
-#  11/22/16: still no recommended stanza.
-# 
-# T S&P Global (Standard & Poor's)
-# U http://netadvantage.standardandpoors.com
-# U http://www.netadvantage.standardandpoors.com
-# U https://ciqimg.com
-# U http://capitaliq.com
-# U https://capitaliq.com
-# U http://na.capitaliq.com
-# U https://na.capitaliq.com
-#
-# are the following needed?
-# U https://w0.ciqimg.com
-# U https://w1.ciqimg.com
-# U https://w2.ciqimg.com
-# U https://w3.ciqimg.com
-# U https://w4.ciqimg.com
-# U https://w5.ciqimg.com
-#  there are more of these--how many?
-#
-# U https://fed.standardandpoors.com
-# U http://www.capitaliq.com
-# U https://www.capitaliq.com
-# DJ netadvantage.standardandpoors.com
-# DJ standardandpoors.com
-# DJ compustat.com
-# DJ capitaliq.com
-# DJ ciqimg.com
-
-#  2018/07/11 Stanza
+#  2018/07/11 
 #  S&P Global NetAdvantage
-#  Updated 2022-07-29
+#  Updated 2024-05-20 per JDurbin
 #  https://help.oclc.org/Library_Management/EZproxy/Database_stanzas/S_P_Global_NetAdvantage
 #
+Option CookiePassThrough
+AnonymousURL -Options +https://qt-iag-ciqplus.capitaliq.com/*
 AnonymousURL -Options +https://charting.capitaliq.com/*
 AnonymousURL -Options +https://iag-ciqplus.capitaliq.com/*
-AnonymousURL -Options +https://qt-iag-ciqplus.capitaliq.com/*
-Option CookiePassThrough
-Title S&P Global NetAdvantage (updated 20220720)
-URL http://na.capitaliq.com/ip/[SITEID]
+T S&P Global (added 20231213)
+HTTPHeader -request -process X-CSRF-Token
+HTTPHeader -request -process com-gmi-*
+HTTPHeader -request -process SNL-*
+HTTPHeader -request -process -unrewrite Authorization
+HTTPHeader -response -edit Access-Control-Allow-Origin "https://www.snl.com"
+MimeFilter text/event-stream .* javascript
+URL https://www.capitaliq.com
+HJ https://www.capitaliq.com
+HJ http://www.capitaliq.com
+HJ https://capitaliq.com
+HJ http://capitaliq.com
+HJ https://capitaliq.spglobal.com
+HJ https://www.snl.com
+HJ www.snl.com
+HJ app.snl.com
+HJ app1.snl.com
+HJ app2.snl.com
+HJ https://capitaliq.spglobal.com
+HJ capitaliq.spglobal.com
+HJ https://www.capitaliq.spglobal.com
+HJ http://www.capitaliq.spglobal.com
+HJ www.capitaliq.spglobal.com
+HJ https://www.capitaliq.spglobal.com
+HJ https://www.capitaliqpro.com
+HJ www.capitaliqpro.com
+HJ platform.mi.spglobal.com
+HJ https://platform.mi.spglobal.com
+HJ platform.marketintelligence.spglobal.com
+HJ https://platform.marketintelligence.spglobal.com
+HJ platform.spgi.spglobal.com
+HJ https://platform.spgi.spglobal.com
+HJ http://na.capitaliq.com/
 HJ https://www.capitaliq.com
 HJ http://www.capitaliq.com
 HJ https://na.capitaliq.com
 HJ https://capitaliq.com
-DJ na.capitaliq.com
-DJ capitaliq.com
-DJ na.capitaliq.com
+HJ sso.mhfi.com
+HJ login.spglobal.com
+HJ sso.spglobal.com
+HJ na.capitaliq.com
 DJ capitaliq.com
 DJ ciqimg.com
 DJ mhfi.com
-DJ login.spglobal.com
 DJ spglobal.com
+DJ snl.com
 Find location.hostname
 Replace location.host
-Option Cookie
+Find && currentDomain != "localhost"
+Replace && 0
+Find https://www.snl.com/SNL.Services.Export.Service
+Replace https://^swww.snl.com^/SNL.Services.Export.Service
+Find www.capitaliq.spglobal.com
+Replace ^swww.capitaliq.spglobal.com^
+Find xmlns=\"http://
+Replace xmlns=\"http://^A
+Find param="http://
+Replace param="http://^A
+Find xmlns=\"https://
+Replace xmlns=\"https://^A
+Find param="https://
+Replace param="https://^A
+Find platform.marketintelligence.spglobal.com
+Replace ^splatform.marketintelligence.spglobal.com^
+Find platform.mi.spglobal.com
+Replace ^splatform.mi.spglobal.com^
 AnonymousURL -*
+Option Cookie
+NeverProxy app.snl.com
+NeverProxy cdn.spgi.spglobal.com
+NeverProxy walkme.com
+Neverproxy secure.signin.spglobal.com
 
-#AnonymousURL -Options +https://charting.capitaliq.com/*
-#AnonymousURL -Options +https://iag-ciqplus.capitaliq.com/*
-#Option CookiePassThrough
-#Title S&P Global NetAdvantage
-#URL http://na.capitaliq.com/ip/[SITEID]
-#HJ https://www.capitaliq.com
-#HJ http://www.capitaliq.com
-#Host https://na.capitaliq.com
-#Host https://capitaliq.com
-#D na.capitaliq.com
-#D capitaliq.com
-#DJ na.capitaliq.com
-#DJ capitaliq.com
-#DJ ciqimg.com
-#DJ mhfi.com
-#DJ spglobal.com
-#Find location.hostname
-#Replace location.host
-#Option Cookie
+
+#  Updated 2024-05-20 per JDurbin
+#  This stanza is required to resolve the Cookie Banner pop-up issue IncludeFile databases/cookielaw.txt
 #
-#  11/3/2017: OCLC-recommended stanza applied
-#  S&P Global NetAdvantage
-#  8/30/2017 
-#  https://www.oclc.org/support/services/ezproxy/documentation/db/netadvantage.en.html#par_text_title
-#
-#Option CookiePassThrough
-#Title S&P Global NetAdvantage
-# URL https://na.capitaliq.com/ip/[SITEID]
-#URL https://na.capitaliq.com/ip/INPUI
-#HJ https://www.capitaliq.com
-#HJ http://www.capitaliq.com
-#Host https://na.capitaliq.com
-#Host https://capitaliq.com
-#D na.capitaliq.com
-#D capitaliq.com
-#DJ na.capitaliq.com
-#DJ capitaliq.com
-#DJ ciqimg.com
-#DJ mhfi.com
-#DJ spglobal.com
-#Find location.hostname
-#Replace location.host
-
-
-# updated 8/17/16 per KP
+Title SAE MOBILUS (OCLC IncludeFile updated 20220812)
+URL http://saemobilus.sae.org
+HJ https://sae.org
+HJ https://saemobilus.sae.org
+HJ https://www.sae.org
+HJ https://digitallibrary.sae.org
+HJ digitallibrary.sae.org
+HJ sae.org
+HJ www.sae.org
+DJ sae.org
+DJ saemobilus.sae.org
 T SAE International
 U http://saemobilus.sae.org
 U https://saemobilus.sae.org
@@ -4344,13 +4329,23 @@ T SimplyMap
 U http://www.simplymap.com
 DJ simplymap.com
 
-#  updated 5/4/12 per KP
-T SIRS Discoverer on the Web
-U http://discoverer.prod.sirs.com 
-U http://sks.sirs.com      
-U http://discoverer.sirs.com
-U http://researcher.sirs.com
-D sirs.com
+#  Updated 2024-05-20 per JDurbin
+Title SIRS
+URL http://sks.sirs.com
+HJ sks.sirs.com
+HJ ars.sirs.com
+HJ discoverer.sirs.com
+HJ researcher.sirs.com
+HJ decades.sirs.com
+HJ discoverer.prod.sirs.com
+HJ www.sirs.com
+HJ m.sirs.com
+HJ sirs.com
+DJ sirs.com
+HJ www.proquestk12.com
+HJ auth.proquestk12.com
+HJ proquestk12.com
+DJ proquestk12.com
 
 #
 #  Social Work and Christianity
@@ -4372,23 +4367,15 @@ U http://funnelweb.utcc.utk.edu
 D utcc.utk.edu
 
 #
-#  Online STAT!Ref
-#  by Teton Data Systems
-#  5/7/08 JWE
-#  7/29/13 KP: Includes access to the following:
-#    AAFP Conditions A to Z (2013)
-#    Best Practices in Infection Prevention and Control (2nd Ed : 2012)
-#    International Perspective (2nd Ed. : 2012)
-#    Introductions to Epidemiology (5th Ed. : 2010)
-#    MedCalc 3000: Complete Edition
-#    Oxford Textbook of Public Health (5th Ed. : 2009)
-#    Stedman's Medical Dictionary (28th Ed. : 2006)
-#
-T STAT!Ref
-U http://www.statref.com
-U http://online.statref.com
-U https://online.statref.com
-D online.statref.com
+#  Updated 2024-05-20 per JDurbin
+Title STAT!Ref (updated 20211004)
+URL https://online.statref.com/
+HJ www.statref.com
+HJ https://online.statref.com
+HJ http://online.statref.com
+HJ marketing.statref.com
+HJ online.statref.com
+DJ statref.com
 
 T Systems Biology
 U http://www.ietdl.org
@@ -4506,35 +4493,34 @@ D worlib.org
 # D xreferplus.com
 
 #
-#  Credo Reference (formerly Xref Plus)
-#  Includes Tabor's Cyclopedic Medical Dictionary
-#  updated 3/14/13 per Credo Support email
-#
-# T Credo Reference
-# U http://cts.vresp.com
-# U http://www.credoreference.com
-# DJ credoreference.com
-
-#  OCLC recommended stanza for Credo Reference 9/26/17
-#  https://www.oclc.org/support/services/ezproxy/documentation/db/credoreference.en.html
-#  replaced 10/10/17 JE
-T Credo Reference
-U https://search.credoreference.com
+#  Updated 2024-05-20 per JDurbin
+Title Credo Reference (updated 20180717)
+URL https://search.credoreference.com
+DJ credoreference.com
 HJ api.credoreference.com
+HJ beagle.credoreference.com
+HJ credoreference.com
 HJ homework.credoreference.com
 HJ literati.credoreference.com
+HJ login.credoreference.com
+HJ school.credoreference.com
 HJ search.credoreference.com
+HJ search.help.credoreference.com
+HJ support.credoreference.com
 HJ vle.credoreference.com
-HJ credoreference.com
 HJ www.credoreference.com
-HJ https://api.credoreference.com
+HJ https://www.credoreference.com
+HJ https://credoreference.com
 HJ https://homework.credoreference.com
+HJ https://literati.credoreference.com
+HJ https://school.credoreference.com
 HJ https://search.credoreference.com
+HJ https://support.credoreference.com
 HJ https://vle.credoreference.com
-DJ credoreference.com
-NeverProxy assets.credoreference.com
-NeverProxy cdn.credoreference.com
+HJ https://www.credoreference.com
 NeverProxy media.credoreference.com
+NeverProxy cdn.credoreference.com
+NeverProxy assets.credoreference.com
 
 T Matthew Bender
 U http://www.matthewbender.com  
@@ -4590,10 +4576,16 @@ HJ classic.iucat-test.uits.iu.edu:12200
 # U http://www.indiana.edu
 # H www.indiana.edu
 
-#  Added 4/10/02 JWE 
-T InteLex Past Masters
-U http://pm.nlx.com
-DJ nlx.com
+#  Added 2002-04-10 JWE 
+#  Updated 2024-05-20 per JDurbin
+Title InteLex Past Masters (updated 20160727)
+URL http://pm.nlx.com
+H crkn.nlx.com
+H library.nlx.com
+H nlx.com
+H trial.nlx.com
+H www.nlx.com
+D nlx.com
 
 #
 #  UL-CONTENT server
@@ -4752,9 +4744,14 @@ T intellect
 U http://www.intellectbooks.co.uk
 DJ intellectbooks.co.uk 
 
-# 7/22/09 jwe
-T The Journal of Rheumatology
-U http://www.jrheum.org
+#  2009-07-22 jwe
+#  Updated 2024-05-20 per JDurbin
+Title Journal of Rheumatology (updated 20220309)
+URL http://www.jrheum.org
+HJ https://jrheum.org
+HJ https://www.jrheum.org
+HJ jrheum.org
+HJ www.jrheum.org
 DJ jrheum.org
 
 # 7/23/09 jwe
@@ -4848,32 +4845,47 @@ DJ against-the-grain.com
 # U http://inspire.in.gov
 # DJ inspire.in.gov
 
-#  8/26/09
-#  Updated 2023/01/10 per JDurbin
-AnonymousURL  +https://journalytics-medicine.cabells.com/*
-AnonymousURL  +https://auth.cabells.com/*
-AnonymousURL  +https://contact.cabells.com/*
-AnonymousURL  +https://signup-medicine.cabells.com/*
-AnonymousURL  +https://search.cabells.com/*
-AnonymousURL  +https://usage.cabells.com/*
-AnonymousURL  +https://medicine.cabells.com/*
-Title Cabell's Directories of Publishing Opportunities (updated 20221212)
+#  2009-08-26
+#  Updated 2024-05-20 per JDurbin
+AnonymousURL +https://search-academic.cabells.com/*
+AnonymousURL +https://search-medicine.cabells.com/*
+AnonymousURL +https://auth.cabells.com/*
+AnonymousURL +https://contact.cabells.com/*
+AnonymousURL +https://signup-medicine.cabells.com/*
+AnonymousURL +https://usage.cabells.com/*
+Title Cabells Directories (updated 20240226)
 HTTPHeader -request -process x-functions-key
 HTTPHeader -request -process SESSION_ID
 HTTPHeader -request -process USER_ID
-URL https://www.cabells.com
-HJ http://www.cabells.com
-HJ http://www2.cabells.com
+HTTPHeader -request -process Datadome
+HTTPHeader -response -process X-DataDome
+HTTPHeader -response -process Accept-CH
+URL https://app.cabells.com
+HJ http://www2.cabells.com/
 HJ https://www2.cabells.com
-HJ www.cabells.com
-HJ https://ssl2.cabells.com
 HJ https://journalytics-medicine.cabells.com
+HJ http://journalytics-medicine.cabells.com
 HJ https://medicine.cabells.com
-HJ ssl2.cabells.com
-HJ secure.cabells.com
-HJ https://secure.cabells.com
+HJ http://medicine.cabells.com
+HJ https://www.cabells.com
+HJ http://www.cabells.com
+HJ https://app.cabells.com
+HJ http://app.cabells.com
+HJ https://search-academic.cabells.com
+HJ http://search-academic.cabells.com
+HJ https://search-medicine.cabells.com
+HJ http://search-medicine.cabells.com
+HJ https://contact.cabells.com
+HJ http://contact.cabells.com
+HJ https://usage.cabells.com
+HJ http://usage.cabells.com
+HJ https://auth.cabells.com
+HJ http://auth.cabells.com
+HJ https://signup-medicine.cabells.com
+HJ http://signup-medicine.cabells.com
+HJ https://www.datacorp.net
+HJ http://www.datacorp.net
 DJ cabells.com
-HJ www.datacorp.net
 DJ datacorp.net
 NeverProxy cms.cabells.com
 AnonymousURL -*
@@ -4927,9 +4939,11 @@ T Optics & Photonics News
 U http://www.osa-opn.org
 DJ osa-opn.org
 
-# 11/5/09
-T Current History
-U http://www.currenthistory.com
+# 2009-11-05
+#  Updated 2024-05-20 per JDurbin
+Title Current History (updated 20191016)
+URL http://www.currenthistory.com/
+HJ www.currenthistory.com
 DJ currenthistory.com
 
 # 11/30/09 
@@ -5016,15 +5030,15 @@ T Library of Congress Classification Web
 U http://classificationweb.net
 DJ classificationweb.net
 
-# 6/1/10
-#  updated 7/10/13 per KP
-# Former title: designinform
-T Arts:Search
-U http://www.designinform.co.uk
-U http://www.arts-search.com 
-U http://arts-search.com
+#  2010-06-01
+#  Updated 2024-05-20 per JDurbin
+#  Former title: designinform
+Title Arts-Search (updated 20200504)
+URL http://arts-search.com/database/
+HJ www.arts-search.com/
+HJ arts-search.com
 DJ arts-search.com
-DJ designinform.co.uk
+
 
 # 6/16/10
 T American Mineralogist
@@ -5197,10 +5211,12 @@ T AP Stylebook Online
 U https://www.apstylebook.com
 DJ apstylebook.com
  
-# 9/27/10
-T HAPI Online (Hispanic American Periodicals Index)
-U http://hapi.ucla.edu
-DJ ucla.edu
+#  2010-09-09
+#  Updated 2024-05-20 per JDurbin
+Title Hispanic American Periodicals Index (HAPI) (updated 20200727)
+URL https://hapi.ucla.edu
+HJ http://www.hapi.ucla.edu
+DJ ucla.edu 
 
 # 10/19/10
 T GreenFILE (EBSCO)
@@ -5293,22 +5309,118 @@ D libraryissues.com
 #  updated 4/13/18 BB--apparently this site has been rebranded as GeoScienceWorld
 #  although the AAPG URLs still work,
 # T American Association of Petroleum Geosciences
-T GeoScienceWorld
-U http://aapgbull.geoscienceworld.org
-U http://search.datapages.com
-U https://archives.datapages.com
-U http://aapgbulletin.datapages.com
-U http://aapg.org
-U http://www.aapg.org
-U http://ebooks.geoscienceworld.org
-U https://ebooks.geoscienceworld.org
-U http://srl.geoscienceworld.org
-U https://srl.geoscienceworld.org
-U http://pubs.geoscienceworld.org
-U https://pubs.geoscienceworld.org
+#  Updated 2024-05-20 per JDurbin
+Title GeoScienceWorld (updated 20190808)
+URL http://www.geoscienceworld.org/
+HJ www.geoscienceworld.org
+HJ aapgbull.geoscienceworld.org
+HJ ammin.geoscienceworld.org
+HJ bsgf.geoscienceworld.org
+HJ bcpg.geoscienceworld.org
+HJ bssa.geoscienceworld.org
+HJ canmin.geoscienceworld.org
+HJ cjes.geoscienceworld.org
+HJ claymin.geoscienceworld.org
+HJ ccm.geoscienceworld.org
+HJ ebooks.geoscienceworld.org
+HJ econgeol.geoscienceworld.org
+HJ eeg.geoscienceworld.org
+HJ eg.geoscienceworld.org
+HJ elements.geoscienceworld.org
+HJ emg.geoscienceworld.org
+HJ eurjmin.geoscienceworld.org
+HJ gsa.geoscienceworld.org
+HJ perspectives.geoscienceworld.org
+HJ geea.geoscienceworld.org
+HJ geolmag.geoscienceworld.org
+HJ geology.geoscienceworld.org
+HJ geophysics.geoscienceworld.org
+HJ geoscienceworld.org
+HJ geosphere.geoscienceworld.org
+HJ bulletin.geoscienceworld.org
+HJ interpretation.geoscienceworld.org
+HJ italianjgeo.geoscienceworld.org
+HJ jeeg.geoscienceworld.org
+HJ jfr.geoscienceworld.org
+HJ jpaleontol.geoscienceworld.org
+HJ jsedres.geoscienceworld.org
+HJ jgs.geoscienceworld.org
+HJ lithosphere.geoscienceworld.org
+HJ micropal.geoscienceworld.org
+HJ minmag.geoscienceworld.org
+HJ palaios.geoscienceworld.org
+HJ paleobiol.geoscienceworld.org
+HJ palynology.geoscienceworld.org
+HJ pg.geoscienceworld.org
+HJ qjegh.geoscienceworld.org
+HJ rimg.geoscienceworld.org
+HJ rmg.geoscienceworld.org
+HJ srl.geoscienceworld.org
+HJ sajg.geoscienceworld.org
+HJ tle.geoscienceworld.org
+HJ vzj.geoscienceworld.org
+HJ pygs.geoscienceworld.org
+HJ sjg.geoscienceworld.org
+HJ jm.geoscienceworld.org
+HJ pubs.geoscienceworld.org
+HJ geoscienceworld.org
+HJ https://www.geoscienceworld.org
+HJ https://aapgbull.geoscienceworld.org
+HJ https://ammin.geoscienceworld.org
+HJ https://bsgf.geoscienceworld.org
+HJ https://bcpg.geoscienceworld.org
+HJ https://bssa.geoscienceworld.org
+HJ https://canmin.geoscienceworld.org
+HJ https://cjes.geoscienceworld.org
+HJ https://claymin.geoscienceworld.org
+HJ https://ccm.geoscienceworld.org
+HJ https://ebooks.geoscienceworld.org
+HJ https://econgeol.geoscienceworld.org
+HJ https://eeg.geoscienceworld.org
+HJ https://eg.geoscienceworld.org
+HJ https://elements.geoscienceworld.org
+HJ https://emg.geoscienceworld.org
+HJ https://eurjmin.geoscienceworld.org
+HJ https://gsa.geoscienceworld.org
+HJ https://perspectives.geoscienceworld.org
+HJ https://geea.geoscienceworld.org
+HJ https://geolmag.geoscienceworld.org
+HJ https://geology.geoscienceworld.org
+HJ https://geophysics.geoscienceworld.org
+HJ https://geoscienceworld.org
+HJ https://geosphere.geoscienceworld.org
+HJ https://bulletin.geoscienceworld.org
+HJ https://interpretation.geoscienceworld.org
+HJ https://italianjgeo.geoscienceworld.org
+HJ https://jeeg.geoscienceworld.org
+HJ https://jfr.geoscienceworld.org
+HJ https://jpaleontol.geoscienceworld.org
+HJ https://jsedres.geoscienceworld.org
+HJ https://jgs.geoscienceworld.org
+HJ https://lithosphere.geoscienceworld.org
+HJ https://micropal.geoscienceworld.org
+HJ https://minmag.geoscienceworld.org
+HJ https://palaios.geoscienceworld.org
+HJ https://paleobiol.geoscienceworld.org
+HJ https://palynology.geoscienceworld.org
+HJ https://pg.geoscienceworld.org
+HJ https://qjegh.geoscienceworld.org
+HJ https://rimg.geoscienceworld.org
+HJ https://rmg.geoscienceworld.org
+HJ https://srl.geoscienceworld.org
+HJ https://sajg.geoscienceworld.org
+HJ https://tle.geoscienceworld.org
+HJ https://vzj.geoscienceworld.org
+HJ https://pygs.geoscienceworld.org
+HJ https://sjg.geoscienceworld.org
+HJ https://jm.geoscienceworld.org
+HJ https://geoscienceworld.org
+HJ https://pubs.geoscienceworld.org
+HJ nagt-jge.org
+HJ https://nagt-jge.org
+DJ nagt-jge.org
 DJ geoscienceworld.org
-D datapages.com
-D aapg.org
+
 
 # 3/23/11 BB
 T NAGT Journal of Geoscience Education
@@ -5316,12 +5428,17 @@ U http://www.nagt-jge.org
 U http://nagt-jge.org
 D nagt-jge.org
 
-# 3/25/11 BB
-T Editions Armand-Colin
-U http://www.revues.armand-colin.com
-U http://armand-colin.com
-U http://www.armand-colin.com
-D armand-colin.com
+#  2011-03-25 BB
+#  Updated 2024-05-20 per JDurbin
+Title Armand Colin Revues (updated 20240311)
+URL https://www.revues.armand-colin.com
+HJ https://www.revues.armand-colin.com
+HJ https://revues.armand-colin.com
+HJ http://www.revues.armand-colin.com
+HJ http://revues.armand-colin.com
+DJ armand-colin.com
+Find http://www.revues.armand-colin.com
+Replace https://www.revues.armand-colin.com
 
 # 4/4/11
 # updated 2023-10-05 per JDurbin
@@ -5339,11 +5456,20 @@ DJ pdcnet.org
 Find var urlNeu=urlAlt.replace(/http:/, "https:");
 Replace var urlNeu=urlAlt.replace(/http:\/\/www.pdcnet.org.*?(\/.*)$/, "https://^swww.pdcnet.org^$1");
 
-# 4/4/11
-T American Geophysical Union
-U http://agu.org
-U http://www.agu.org
-D agu.org
+#  2011-04-04
+#  Updated 2024-05-20 per JDurbin
+Title American Geophysical Union (updated 20160119)
+URL http://www.agu.org
+HJ agu.org
+HJ europa.agu.org
+HJ https://agu.org
+HJ https://publications.agu.org
+HJ https://sites.agu.org
+HJ https://www.agu.org
+HJ publications.agu.org
+HJ sites.agu.org
+HJ www.agu.org
+DJ agu.org
 
 # 4/5/11 BB
 T ACTA Press
@@ -5351,16 +5477,29 @@ U http://actapress.com
 U http://www.actapress.com
 D actapress.com
 
-# 4/5/11 KP
-# Updated 2022-07-29 per JD
-Title University of Wisconsin Press (updated 20220617)
+# 2011-04-05 KP
+# Updated 2024-05-20 per JDurbin
+Title University of Wisconsin Press (updated 20240112)
 URL http://www.uwpress.org/
 HJ aa.uwpress.org
 HJ aoj.uwpress.org
 HJ cl.uwpress.org
 HJ er.uwpress.org
 HJ hopp.uwpress.org
+HJ https://aa.uwpress.org
+HJ https://aoj.uwpress.org
+HJ https://cl.uwpress.org
+HJ https://er.uwpress.org
 HJ https://hopp.uwpress.org
+HJ https://jhr.uwpress.org
+HJ https://lbr.uwpress.org
+HJ https://le.uwpress.org
+HJ https://lj.uwpress.org
+HJ https://mon.uwpress.org
+HJ https://npj.uwpress.org
+HJ https://sca.uwpress.org
+HJ https://sub.uwpress.org
+HJ https://uwpress.org
 HJ https://uwpress.wisc.edu
 HJ https://www.uwpress.wisc.edu
 HJ jhr.uwpress.org
@@ -5370,6 +5509,7 @@ HJ lj.uwpress.org
 HJ mon.uwpress.org
 HJ muse.jhu.edu
 HJ npj.uwpress.org
+HJ sca.uwpress.org
 HJ sub.uwpress.org
 HJ uwpress.org
 HJ uwpress.wisc.edu
@@ -5394,21 +5534,34 @@ U http://erudit.org
 U http://www.erudit.org
 D erudit.org
 
-# 4/8/11 BB
-#  updated 6/12/12 BB
-T Equinox Jazz Research Journal
-U http://equinoxjournals.com
-U http://www.equinoxjournals.com
-U http://equinoxpub.com
-U http://www.equinoxpub.com
-D equinoxjournals.com
-D equinoxpub.com
+#  2011-04-08 BB
+#  Updated 2024-05-20 per JDurbin
+# for Equinox Jazz Research Journal
+T Equinox Publishing Ltd. (updated 20231101)
+U https://www.equinoxpub.com/home/
+HJ equinoxpub.com
+HJ https://equinoxpub.com
+HJ https://journal.equinoxpub.com
+HJ https://journals.equinoxpub.com
+HJ https://www.equinoxpub.com
+HJ journal.equinoxpub.com
+HJ journals.equinoxpub.com
+HJ www.equinoxjournals.com
+HJ www.equinoxpub.com
+DJ equinoxjournals.com
+DJ equinoxpub.com
+Find pdfUrl = "https:\/\/journal.equinoxpub.com
+Replace pdfUrl = "https:\/\/^Sjournal.equinoxpub.com^
 
-# 4/8/11 BB
-T Philosophy Now magazine
-U http://philosophynow.org
-U http://www.philosophynow.org
-D philosophynow.org
+#  2011-04-18 BB
+#  Updated 2024-05-20 per JDurbin
+Title Philosophy Now (updated 20191015)
+URL https://www.philosophynow.org
+HJ www.philosophynow.org
+HJ philosophynow.org
+HJ https://www.philosophynow.org
+HJ https://philosophynow.org
+DJ philosophynow.org
 
 # 4/11/11 KP
 T Inquiry Journal Online
@@ -5470,11 +5623,17 @@ U http://magnapubs.com
 U http://www.magnapubs.com
 D magnapubs.com
 
-# 4/29/11 BB
-T American Economic Association
-U http://aeaweb.org
-U http://www.aeaweb.org
-D aeaweb.org
+#  2011-04-29 BB
+#  Updated 2024-05-20 per JDurbin
+Title American Economic Association (updated 20200110)
+HTTPHeader -request -process X-CSRF-Token
+HTTPHeader -request -process X-Key
+HTTPHeader -request -process X-Requested-With
+URL https://www.aeaweb.org/
+HJ aeaweb.org
+HJ pubs.aeaweb.org
+HJ www.aeaweb.org
+DJ aeaweb.org
 
 # 5/9/11 KP
 T International Reading Association
@@ -5523,11 +5682,14 @@ HJ www.oldcitypublishing.com
 DJ oldcitypublishing.com
 
 
-# 5/31/11 BB
-T St. Jerome Publishing
-U http://stjerome.co.uk
-U http://www.stjerome.co.uk
-D stjerome.co.uk
+#  2011-05-31 BB
+#  Updated 2024-05-20 per JDurbin
+Title St Jerome Publishing (updated 20150514)
+URL https://www.stjerome.co.uk/
+HJ stjerome.co.uk
+HJ www.stjerome.co.uk
+HJ https://stjerome.co.uk
+DJ stjerome.co.uk 
 
 # 6/9/11 BB
 T Princeton University 
@@ -5550,28 +5712,31 @@ U https://soils.org
 U https://www.soils.org
 D soils.org
 
-#  7/6/11 JE per MBM
-#  Updated 8/29/12 KP
-#  and again 3/12/14 KP
-#  updated 12/9/19 per RL
+#  2011-07-06 JE per MBM
+#  Updated 2024-05-20 per JDurbin
 #  HRAF = Human Relations Area Files
-T eHRAF World Cultures
-# U http://hraf01.its.yale.edu
-U http://ehrafworldcultures-beta.its.yale.edu
-U https://ehrafworldcultures-beta.its.yale.edu
-U http://ehrafworldcultures.yale.edu
-U https://ehrafworldcultures.yale.edu
-U http://hraf.yale.edu
-U https://hraf.yale.edu
+Title eHRAF World Cultures (updated 20210218)
+URL https://ehrafworldcultures.yale.edu
+HJ 130.132.52.51
+HJ ehrafworldcultures.yale.edu
+HJ hraf01.its.yale.edu
+HJ https://ehrafworldcultures.yale.edu
 DJ yale.edu
 
-# 7/12/11 KP 
-#  vendor is: infogroup.com
-#T Reference USA
-#U http://referenceusa.com
-#U http://www.referenceusa.com
-#D referenceusa.com
-IncludeFile includes/referenceusa.txt
+#  2011-07-12 KP 
+#  Updated 2024-05-20 per JDurbin
+Option X-Forwarded-For
+Option DomainCookieOnly
+Title ReferenceUSA (updated 20240424)
+URL http://www.referenceusa.com
+HJ www.referenceusa.com
+HJ https://www.referenceusa.com
+HJ labs.referenceusa.com
+HJ referenceusa.com
+DJ referenceusa.com
+NeverProxy maps.googleapis.com
+Option Cookie
+Option NoX-Forwarded-For
 
 IncludeFile includes/ibisworld.txt
 #  Following 2 lines appended 11/21/19 per email
@@ -5652,11 +5817,15 @@ NeverProxy by.uservoice.com
 NeverProxy widget.uservoice.com
 Option Cookie
 
-# 11/1/11 BB
-T College Publishing
-U http://journalofgreenbuilding.com
-U http://www.journalofgreenbuilding.com
-D journalofgreenbuilding.com
+#  2011-11-01 BB
+#  Updated 2024-05-20 per JDurbin
+Title College Publishing (updated 20191213)
+URL http://www.collegepublishing.us/
+HJ https://www.journalofgreenbuilding.com
+HJ www.collegepublishing.us
+HJ www.journalofgreenbuilding.com
+DJ collegepublishing.us
+DJ journalofgreenbuilding.com
 
 # 11/1/11 BB
 T Michigan State University Press
@@ -5668,10 +5837,16 @@ T Eastern Michigan University Digital Commons
 U http://commons.emich.edu
 D emich.edu
 
-# 12/7/11 BB
-T American Public Health Association
-U http://ajph.aphapublications.org
-D aphapublications.org
+#  2011-12-07 BB
+#  Updated 2024-05-20 per JDurbin
+Title American Public Health Association (updated 20200210)
+URL http://ajph.aphapublications.org/
+HJ ajph.aphapublications.org
+HJ aphapublications.org
+HJ https://ajph.aphapublications.org
+HJ thenationshealth.aphapublications.org
+HJ www.aphapublications.org
+DJ aphapublications.org
 
 # 12/14/11 JJ
 T National Academies Press
@@ -5696,11 +5871,14 @@ D accessabc.com
 D auditedmedia.com
 
 
-# 2/16/12 BB
-T Stash Online Video Library
-U http://stashmedia.tv
-U http://www.stashmedia.tv
-D stashmedia.tv
+#  2012-02-16 BB
+#  Updated 2024-05-20 per JDurbin
+# Stash Online Video Library
+Title Stash Media (Updated 20230118)
+URL https://www.stashmedia.tv/login
+HJ https://www.stashmedia.tv
+HJ www.stashmedia.tv
+DJ stashmedia.tv
 
 # 3/7/12 JJ
 T Chemical Engineering
@@ -5719,11 +5897,14 @@ U http://sociologyencyclopedia.com
 U http://www.sociologyencyclopedia.com
 D sociologyencyclopedia.com
 
-# 4/24/12 BB
-T Offical Museum Directory
-U http://officialmuseumdirectory.com
-U http://www.officialmuseumdirectory.com
-D officialmuseumdirectory.com
+#  2012-04-24 BB
+#  Updated 2024-05-20 per JDurbin
+Title Official Museum Directory (updated 20210215)
+URL https://www.officialmuseumdirectory.com/OMD/search
+HJ http://www.officialmuseumdirectory.com
+HJ https://officialmuseumdirectory.com
+HJ http://officialmusuemdirectory.com
+DJ officialmuseumdirectory.com
 
 # 5/2/12 JJ
 # 9/6/12 JJ 
@@ -5765,16 +5946,45 @@ DJ aiaa-space.org
 DJ aiaa.org
 DJ aiaafoundation.org
 
-# 5/23/12 KP
-T ASTM Standards and Engineering Digital Library (SEDL)
-U http://enterprise.astm.org
+#  2012-05-23 KP
+#  Updated 2024-05-20 per JDurbin
+HTTPMethod OPTIONS
+HTTPMethod DELETE
+HTTPMethod PUT
+AnonymousURL -OPTIONS +https://secure.astm.org/*
+AnonymousURL +https://compass.astm.org/*
+Title ASTM Compass 2.0 (updated 20221214)
+HTTPHeader -request -process x-okta-user-agent-extended
+HTTPHeader -request -process x-okta-request-id
+HTTPHeader -request -process XSRF-TOKEN "*"
+HTTPHeader -request -process AuthMode "*"
+HTTPHeader -request -process RequestId "*"
+MimeFilter application/json .* javascript
+URL https://secure.astm.org/login?redirectUrl=aHR0cHM6Ly9jb21wYXNzLmFzdG0ub3Jn&newApproach=true
+HJ http://secure.astm.org
+HJ https://secure.astm.org
+HJ https://astm.org
+HJ http://astm.org
 DJ astm.org
+NeverProxy iam.astm.org
+NeverProxy compass.astm.org
+NeverProxy v2compass.astm.org
+NeverProxy cdn.jsdelivr.net
+Find proxycl=https://
+Replace proxycl=https://^A
+Find www.astm.org
+Replace ^Swww.astm.org^
+AnonymousURL -*
 
-# 6/28/12 BB
-T Healio Nursing
-U http://healio.com
-U http://www.healio.com
-D healio.com
+# 2012-06-28 BB
+#  Updated 2024-05-20 per JDurbin
+Title Healio Nursing (updated 20220323)
+URL https://www.healio.com/
+HJ www.healio.com
+HJ healio.com
+HJ https://healio.com
+HJ https://journals.healio.com
+DJ healio.com
 
 # 6/29/12 BB
 # Updated 2022-07-29 per JD
@@ -5791,11 +6001,19 @@ HJ www.ametsoc.org
 DJ ams-journals.ametsoc.org
 DJ ametsoc.org
 
-# 7/2/12 BB
-T Europa World of Learning Online
-U http://worldoflearning.com
-U http://www.worldoflearning.com
-D worldoflearning.com
+#  2012-07-02 BB
+#  Updated 2024-05-20 per JDurbin
+#Europa World of Learning
+AnonymousURL +https://api.taylorfrancis.com/*
+AnonymousURL +https://events.taylorandfrancis.com/*
+Title World of Learning (updated 20220512)
+URL https://www.worldoflearning.com
+HJ https://www.worldoflearning.com
+HJ https://api.taylorfrancis.com
+HJ https://events.taylorandfrancis.com
+HJ www.worldoflearning.com
+DJ worldoflearning.com
+AnonymousURL -*
 
 # 7/12/12 KP
 T Teachers College Record
@@ -5816,13 +6034,21 @@ U http://aami.org
 U http://www.aami.org
 D aami.org
 
-# 10/15/12 BB
-T International Press 
-U http://intlpress.com
-U http://www.intlpress.com
-U https://intlpress.com
-U https://www.intlpress.com
-D intlpress.com
+#  2012-10-15 BB
+#  Updated 2024-05-20 per JDurbin
+Title International Press (updated 20191002)
+URL http://intlpress.com/
+H intlpress.com
+H projecteuclid.org
+H www.emis.de
+H www.intlpress.com
+H www.mrlonline.org
+HJ https://www.intlpress.com
+HJ https://intlpress.com
+DJ intlpress.com
+DJ projecteuclid.org
+DJ emis.de
+DJ mrlonline.org
 
 # Updated 2023-07-19 per TB
 Title Portico (updated 20210615)
@@ -5835,14 +6061,23 @@ HJ portico.org
 HJ www.portico.org
 DJ portico.org
 
-# 10/22/12 KP
-#  updated 9/6/19 BB
-T ECS - The Electrochemical Society
-U http://ecst.ecsdl.org
-U http://interface.ecsdl.org
-U http://eel.ecsdl.org
-U http://ssl.ecsdl.org
-D ecsdl.org
+#  2012-10-22 KP
+#  Updated 2019-09-06 per BB
+#  Updated 2024-05-20 per JDurbin
+Title Electrochemical Society, Inc. (updated 20180308)
+URL http://ecst.ecsdl.org/
+H ecsdl.org
+H ecst.ecsdl.org
+H eel.ecsdl.org
+H esl.ecsdl.org
+H jes.ecsdl.org
+H jss.ecsdl.org
+H ma.ecsdl.org
+H ssl.ecsdl.org
+H www.ecsdl.org
+H www.electrochem.org
+DJ ecsdl.org
+DJ electrochem.org
 
 # 12/3/12 KP
 # 05/15/23 updated per JD
@@ -5853,11 +6088,17 @@ HJ www2.buildinggreen.com
 DJ buildinggreen.com
 RedirectSafe buildinggreen.com
 
-# 12/6/12 KP
-T PrivCo
-U http://privco.com
-U http://www.privco.com
-D privco.com
+#  2012-12-06 KP
+#  Updated 2024-05-20 per JDurbin
+Title PrivCo (updated 20190122)
+URL https://system.privco.com/academic
+HJ www.privco.com
+HJ http://www.privco.com
+HJ https://www.privco.com
+HJ privco.com
+DJ privco.com
+HJ system.privco.com
+HJ https://system.privco.com
 
 # 2/11/13 KP
 # American Society of Animal Science
@@ -5996,12 +6237,13 @@ U http://opticsinfobase.org
 U http://www.opticsinfobase.org 
 DJ opticsinfobase.org
 
-# 8/1/13 KP
-T Library Journal
-U http://libraryjournal.com
-U http://www.libraryjournal.com
-U http://lj.libraryjournal.com
-D libraryjournal.com
+#  2013-08-01 KP
+#  Updated 2024-05-20 per JDurbin
+Title Library Journal (updated 20190904)
+URL https://www.libraryjournal.com/
+HJ https://www.libraryjournal.com/
+HJ www.libraryjournal.com/
+DJ libraryjournal.com/
 
 # 8/6/13 BB
 T American Marketing Association
@@ -7040,7 +7282,6 @@ DJ ajax.googleapis.com
 HTTPMethod PUT
 HTTPMethod OPTIONS
 AnonymousURL -OPTIONS +https://examenonline-medone.thieme.de/*
-# Stanza 11:
 Title Thieme MedOne Education
 HTTPHeader X-CSRF-TOKEN
 U https://medone-education.thieme.com
@@ -7059,7 +7300,6 @@ AnonymousURL -*
 HTTPMethod PUT
 HTTPMethod OPTIONS
 AnonymousURL -OPTIONS +https://examenonline-medone.thieme.de/*
-# Stanza 12:
 Title Thieme MedOne Radiology
 HTTPHeader X-CSRF-TOKEN
 U https://medone-radiology.thieme.com
