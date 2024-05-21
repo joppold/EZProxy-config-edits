@@ -3844,11 +3844,6 @@ HJ www.cabidigitallibrary.org
 DJ cabidigitallibrary.org
 Option Cookie
 
-
-T Library of Congress Information Bulletin ( <A href="gopher://marvel.loc.gov/11/loc/pubs/lcib">1992-1996</A>,  1997-present)
-U http://lcweb.loc.gov
-D loc.gov
-
 T Library Philosophy and Practice
 U http://www.uidaho.edu
 D uidaho.edu
@@ -5029,6 +5024,10 @@ DJ guidetoreference.org
 T Library of Congress Classification Web
 U http://classificationweb.net
 DJ classificationweb.net
+#
+#T Library of Congress Information Bulletin ( <A href="gopher://marvel.loc.gov/11/loc/pubs/lcib">1992-1996</A>,  1997-present)
+#U http://lcweb.loc.gov
+#D loc.gov
 
 #  2010-06-01
 #  Updated 2024-05-20 per JDurbin
@@ -6245,10 +6244,19 @@ HJ https://www.libraryjournal.com/
 HJ www.libraryjournal.com/
 DJ libraryjournal.com/
 
-# 8/6/13 BB
-T American Marketing Association
-U http://journals.ama.org
-D ama.org
+#  2013-08-06 BB
+#  Updated 2024-05-21 per JDurbin
+Title American Marketing Association (updated 20180207)
+URL https://www.ama.org/
+HJ ama.org
+HJ archive.ama.org
+HJ https://ama.org
+HJ https://archive.ama.org
+HJ journals.ama.org
+HJ www.ama.org
+DJ ama.org
+Find journals.ama.org
+Replace ^pjournals.ama.org^
 
 # 8/29/13 KP
 T Projekt Dyabola
@@ -6331,17 +6339,30 @@ U http://rethinkingschools.org
 U http://www.rethinkingschools.org
 D rethinkingschools.org
 
-# 1/29/14 BB
-T Maney Publishing
-U http://maneyonline.com
-U http://www.maneyonline.com
-D maneyonline.com
+#  2014-01-29 BB
+#  Updated 2024-05-21 per JDurbin
+Title Maney Online (updated 20141218)
+URL http://www.maneyonline.com/
+HJ www.maneyonline.com
+HJ maneyonline.com
+DJ maneyonline.com
+HJ www.maneypublishing.com
+HJ maneypublishing.com
+DJ maneypublishing.com 
 
-# 5/22/14 BB
-T Edward Elgar Publishing
-U http://elgaronline.com
-U http://www.elgaronline.com
-D elgaronline.com
+#  2014-05-22 BB
+#  Updated 2024-05-21 per JDurbin
+Title Elgaronline (Edward Elgar Publishing) (updated 20200807)
+HTTPHeader -request -process X-Requested-With
+URL http://www.elgaronline.com/
+HJ e-elgar.co.uk
+HJ elgaronline.com
+HJ https://elgaronline.com
+HJ https://www.elgaronline.com
+HJ www.e-elgar.co.uk
+HJ www.elgaronline.com
+DJ e-elgar.co.uk
+DJ elgaronline.com
 
 # 6/9/14 TB
 T Simon Fraser University
@@ -6411,12 +6432,16 @@ U https://sbrnet.com
 D sbrnet.com
 D sportsmarketanalytics.com
 
-#  new 11/19/14 per TB (RLML)
+#  new 2014-11-19 per TB (RLML)
+#  Updated 2024-05-21 per JDurbin
 #  This is an IU-systemwide resource licensed by IUB Libraries
-T Bioone
-U http://bioone.org
-U http://www.bioone.org
-D bioone.org
+Title BioOne Complete (updated 20200923)
+URL https://www.bioone.org/
+HJ http://www.bioone.org
+HJ https://bioone.org
+HJ http://bioone.org
+HJ www.bioone.org
+DJ bioone.org
 
 #  new 12/2/14 per KP
 #  updated 4/16/18 per Kanopy, KP
@@ -6486,15 +6511,27 @@ U http://www.dieselnet.com
 U http://dieselnet.com
 D dieselnet.com
 
-# added 3/17/15 per KP 
+#  added 2015-03-17 per KP 
+#  Updated 2024-05-21 per JDurbin
 # Trial subscription (expires ?)
 # Note: digital-library.theiet.org was formerly included under the 
 # American Institute of Physics stanza above--possibly a mistake.
-T Institute of Engineering and Technology, The
-U http://digital-library.theiet.org
-U https://digital-library.theiet.org
-U http://www.theiet.org
-U http://theiet.org
+Title The Institution of Engineering and Technology (updated 20210329)
+URL https://www.theiet.org/
+HJ digital-library.theiet.org
+HJ eandt.theiet.org
+HJ electrical.theiet.org
+HJ faraday.theiet.org
+HJ https://digital-library.theiet.org
+HJ https://eandt.theiet.org
+HJ https://electrical.theiet.org
+HJ https://faraday.theiet.org
+HJ https://theiet.org
+HJ https://tv.theiet.org
+HJ https://www.theiet.org
+HJ theiet.org
+HJ tv.theiet.org
+HJ www.theiet.org
 DJ theiet.org
 
 #  Added 4/1/15 KP
@@ -6527,19 +6564,17 @@ U http://mobilizationjournal.org
 D mobilizationjournal.org
 
 #  Added 5/1/15 BB
-#  updated 1/17/18 per GY
-#  updated 6/13/18 BB
-T Inderscience Online
-U http://inderscienceonline.com
-U https://inderscienceonline.com
-U http://www.inderscienceonline.com
-U https://www.inderscienceonline.com
-U http://inderscience.com
-U https://inderscience.com
-U http://www.inderscience.com
-U https://www.inderscience.com
-D inderscienceonline.com
-D inderscience.com
+#  Updated 2024-05-21 per JDurbin
+Title Inderscience Online (updated 20191107)
+URL https://www.inderscienceonline.com
+HJ https://www.inderscienceonline.com
+HJ https://inderscienceonline.com
+HJ www.inderscienceonline.com
+HJ inderscienceonline.com
+HJ https://inderscience.com
+HJ https://www.inderscience.com
+DJ inderscienceonline.com
+DJ inderscience.com
 
 
 #  Added 6/23/15 BB
@@ -6557,11 +6592,18 @@ U https://crops.org
 U https://www.crops.org
 D crops.org
 
-# Added 8/3/15 per JJ
-T World Bank Group
-U https://www.openknowledge.worldbank.org
-U https://openknowledge.worldbank.org
-D openknowledge.worldbank.org
+#  Added 2015-08-03 per JJ
+#  Updated 2024-05-21 per JDurbin
+Title World Bank eLibrary (updated 20171129)
+URL http://elibrary.worldbank.org/
+HJ elibrary.worldbank.org
+HJ data.worldbank.org
+HJ www.worldbank.org
+HJ https://elibrary.worldbank.org
+HJ https://data.worldbank.org
+HJ https://www.worldbank.org
+HJ worldbank.org
+DJ worldbank.org
 
 #  added 8/12/15 JJ
 #  edited 8/4/2020 per JD
@@ -6595,25 +6637,36 @@ DJ opticsinfobase.org
 DJ osa.org
 DJ osapublishing.org
 
-#  added 10/26/15 je per BB
+#  added 2015-10-26 je per BB
+#  Updated 2024-05-21 per JDurbin
 #  May want to combine this stanza with MIT Press Journals stanza above--
 #  are these considered separate publishers?
-T MIT Sloan Management Review
-U http://www.sloanreview.mit.edu
-U http://sloanreview.mit.edu
-D mit.edu
+Title MIT Sloan Management Review (updated 20201012)
+URL http://sloanreview.mit.edu/
+HJ https://api.queryly.com
+HJ https://sloanreview.mit.edu
+HJ https://www.queryly.com
+HJ sloanreview.mit.edu
+DJ sloanreview.mit.edu
+Find //api.queryly.com/
+Replace //^sapi.queryly.com^/
 
-#  added 3/2/16 per BB
-#  updated 1/25/17 BB
-T Berghahn Books
-U http://www.journals.berghahnbooks.com
-U http://www.berghahnjournals.com 
-U http://berghahnjournals.com 
-U http://journals.berghahnbooks.com
-U http://www.berghahnbooks.com
-U http://berghahnbooks.com
-D berghahnbooks.com
-D berghahnjournals.com
+#  added 2016-03-02 per BB
+#  Updated 2024-05-21 per JDurbin
+Title Berghahn Books (updated 20200812)
+HTTPHeader -request -process X-Requested-With
+URL http://www.berghahnbooks.com
+HJ ams.berghahnjournals.com
+HJ berghahnbooks.com
+HJ berghahnjournals.com
+HJ https://www.berghahnjournals.com/
+HJ https://journals.berghahnbooks.com
+HJ https://www.berghahnbooks.com
+HJ journals.berghahnbooks.com
+HJ www.berghahnbooks.com
+HJ www.berghahnjournals.com
+DJ berghahnbooks.com
+DJ berghahnjournals.com
 
 #  added 3/11/16 per KP
 #  Updated 2022-07-29 per JD
@@ -6629,25 +6682,12 @@ DJ openbookpublishers.com
 AnonymousURL -*
 
 #  added 3/16/16 per JJ 
-#  updated per OCLC/vendor recommendations 4/5/17 je
-# T Swank Digital Campus
-# U http://wvls.swankmp.net
-# U http://wvlsmod.swankmp.net
-# U http://digitalcampus.swankmp.net
-# U http://digitalcampus.swankmp.com
-# U http://dc.swankmp.com
-# U https://wvls.swankmp.net
-# U https://wvlsmod.swankmp.net
-# U https://digitalcampus.swankmp.net
-# U https://digitalcampus.swankmp.com
-# U https://dc.swankmp.com
-# DJ swankmp.net
-# DJ swankmp.com
-
-#  This seems to have fixed the proxy problem with Swank media 4/5/17:
-T Swank Digital Campus
-U https://digitalcampus.swankmp.net
+#  Updated 2024-05-21 per JDurbin
+Title Swank Digital Campus (updated 20200515)
+URL https://digitalcampus.swankmp.net/
 H digitalcampus.swankmp.net
+H https://permalinks.swankmp.net
+D swankmp.net
 
 # added 4/1/16 by PJM
 #  updated 3/23/18 JE per BB
@@ -6655,9 +6695,17 @@ H digitalcampus.swankmp.net
 IncludeFile includes/accessengineering.txt
 
 #  added 4/6/16 per KP
-T Peeters Online Biographies
-U http://pob.peeters-leuven.be
-D pob.peeters-leuven.be
+#  Updated 2024-05-21 per JDurbin
+Title Peeters Publishers (updated 20190822)
+URL http://www.peeters-leuven.be/
+HJ https://secure.peeters-leuven.be
+HJ peeters-leuven.be
+HJ pob.peeters-leuven.be
+HJ poj.peeters-leuven.be
+HJ https://poj.peeters-leuven.be
+HJ secure.peeters-leuven.be
+HJ www.peeters-leuven.be
+DJ peeters-leuven.be
 
 #  added 4/6/16 per KP
 T NASPAA (Network of Schools of Public Policy, Affairs and Administration)
@@ -6681,14 +6729,13 @@ U http://www.gallup.com
 DJ gallup.com
 
 #  added 5/26/16 per KM, JJ
-# edited 02/03/2020 per KM, JJ
-#T MarketResearch.com
-T MarketResearch.com Academic
-U https://academic.marketresearch.com
-U http://www.academic.marketresearch.com
-U http://academic.marketresearch.com
+#  Updated 2024-05-21 per JDurbin
+Title MarketResearch.com Academic (updated 20210624)
+URL https://www.marketresearch.com
+HJ http://www.marketresearch.com
+HJ https://academic.marketresearch.com
+HJ http://academic.marketresearch.com
 DJ marketresearch.com
-H academic.marketresearch.com
 
 #  added 6/2/16 per BM:
 T Association of Baccalaureate Social Work Program Directors
@@ -6737,13 +6784,13 @@ D insights.mrisimmons.com
 #
 IncludeFile includes/db.hoovers.stanza
 
-#  added 8/6/16 per KP
-#  updated 5/31/18 for https support
-T McGraw-Hill eBook Library
-U http://www.mhebooklibrary.com
-U https://www.mhebooklibrary.com
-U http://mhebooklibrary.com
-U https://mhebooklibrary.com
+#  added 2016-08-06 per KP
+#  Updated 2024-05-21 per JDurbin
+Title McGraw-Hill eBookLibrary (updated 20190711)
+URL https://mhebooklibrary.com
+HJ https://www.mhebooklibrary.com
+HJ http://mhebooklibrary.com
+HJ http://www.mhebooklibrary.com
 DJ mhebooklibrary.com
 
 # added from RLML 2021-11-23
@@ -6796,12 +6843,14 @@ U http://www.englishhistoricaldocuments.com
 D englishhistoricaldocuments.com
 
 #  added 2/8/17 per JJ
-T Docuseek
-U http://www.docuseek2.com
-U http://docuseek2.com
-U https://www.docuseek2.com
-U https://docuseek2.com
-# D docuseek2.com
+#  Updated 2024-05-21 per JDurbin
+Title Docuseek2 (updated 20191015)
+HTTPHeader -Request -Process Accept-Encoding
+HTTPHeader -Request -Process X-requested-with
+URL http://docuseek2.com
+HJ https://docuseek2.com
+HJ https://www.docuseek2.com
+HJ www.docuseek2.com
 DJ docuseek2.com
 
 #  added 3/23/17 per BB
@@ -6842,10 +6891,14 @@ IncludeFile includes/informs.txt
 
 
 #  added 6/30/17 JJ
-T SimplyAnalytics
-U http://app.simplyanalytics.com
-U https://app.simplyanalytics.com
+#  Updated 2024-05-21 per JDurbin
+HTTPMethod DELETE
+HTTPMethod PUT
+Title SimplyAnalytics (updated 20210511)
+URL https://app.simplyanalytics.com
+HJ app.simplyanalytics.com
 DJ simplyanalytics.com
+NeverProxy assets.simplyanalytics.com
 
 #  added 8/9/17 BB
 T Black History Bulletin
@@ -6980,13 +7033,11 @@ U http://philpapers.org
 U https://philpapers.org
 DJ philpapers.org
 
-#  added 3/9/18 KP
-T Social Explorer
-U http://socialexplorer.com
-U https://socialexplorer.com
-U http://www.socialexplorer.com
-U https://www.socialexplorer.com
-DJ socialexplorer.com
+#  added 2018-03-09 KP
+#  Updated 2025-05-21 per JDurbin
+URL https://www.socialexplorer.com
+H www.socialexplorer.com
+D socialexplorer.com
 
 #  added 4/11/18 KP
 IncludeFile includes/tugg.stanza
@@ -7043,14 +7094,22 @@ U https://filmplatform.net
 DJ filmplatform.net
 
 
-# All of following 6/18/18 BB:
+# All of following 2018-06-18 BB:
 
-T AKjournals (Akad�miai Kiad�)
-U http://www.akademiai.com 
-U https://www.akademiai.com 
-U http://akademiai.com 
-U https://akademiai.com 
-DJ akademiai.com 
+#  Updated 2024-05-21 per JDurbin
+Title Akademiai Kiado (AKjournals) (updated 20200807)
+HTTPHeader -request -process X-Requested-With
+URL https://akjournals.com/
+HJ akademiai.com
+HJ akjournals.com
+HJ https://akademiai.com
+HJ https://akjournals.com
+HJ https://www.akademiai.com
+HJ https://www.akjournals.com
+HJ www.akademiai.com
+HJ www.akjournals.com
+DJ akademiai.com
+DJ akjournals.com
 
 T Bentham Science
 U http://www.benthamscience.com
@@ -7175,17 +7234,18 @@ U https://www.arthistoryresearch.net
 HJ arthistoryresearch.net
 DJ arthistoryresearch.net
 
-#  added 10/10/18 KP
-Title Psychotherapy.net 
+#  added 2018-10-10 KP
+#  Updated 2024-05-21 per JDurbin
+Title Psychotherapy.net (updated 20200929)
 HTTPHeader -ignoreGlobal Accept-Encoding
 HTTPHeader -request -block Accept-Encoding
 URL https://www.psychotherapy.net/stream/iupui1
 HJ https://www.psychotherapy.net
-HJ www.psychotherapy.net <http://www.psychotherapy.net>
+HJ www.psychotherapy.net
 H https://p3.3playmedia.com
 DJ psychotherapy.net
 NeverProxy player.vimeo.com
-NeverProxy https://cdnapisec.kaltura.com
+NeverProxy cdnapisec.kaltura.com
 
 # added 10/26/18 KP
 #  updated 11/29/18 to use OCLC stanza
@@ -7691,11 +7751,17 @@ URL https://iupui.policymap.com
 HJ iupui.policymap.com
 DJ policymap.com
 
-#  Edited 2023-04-04 per John Durbin
-AnonymousURL +https://api.examine.com/v1/*
-T Examine
+#  Updated 2024-05-21 per JDurbin
+AnonymousURL +https://api.examine.com/*
+AnonymousURL +https://search.examine.com/indexes/content/*
+T Examine (updated 20231212)
 U https://examine.com
 HJ https://examine.com
+HJ http://examine.com
+HJ https://www.examine.com
+HJ www.examine.com
+HJ https://api.examine.com
+HJ api.examine.com
 DJ examine.com
 AnonymousURL -*
 
