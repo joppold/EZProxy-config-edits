@@ -4261,26 +4261,31 @@ NeverProxy walkme.com
 Neverproxy secure.signin.spglobal.com
 
 
-#  Updated 2024-05-20 per JDurbin
+#  Updated 2024-05-22 per JDurbin
 #  This stanza is required to resolve the Cookie Banner pop-up issue IncludeFile databases/cookielaw.txt
 #
-Title SAE MOBILUS (OCLC IncludeFile updated 20220812)
-URL http://saemobilus.sae.org
-HJ https://sae.org
-HJ https://saemobilus.sae.org
+AnonymousURL -OPTIONS +https://dsa.fullsight.org/*
+AnonymousURL +https://dsa.fullsight.org/*
+AnonymousURL +https://api2.sae.org/*
+AnonymousURL +https://www.sae.org/restservices/*
+Title SAE MOBILUS (updated 20240515)
+HTTPHeader -request -process X-Auth-Token
+HTTPHeader -response -process X-Auth-Token
+HTTPHeader -response -block Content-Security-Policy
+HTTPHeader -request -process Access-Control-Allow-Origin
+URL https://saemobilus.sae.org
+HJ http://saemobilus.sae.org
+HJ https://dsa.fullsight.org
+HJ dsa.fullsight.org
 HJ https://www.sae.org
-HJ https://digitallibrary.sae.org
-HJ digitallibrary.sae.org
-HJ sae.org
-HJ www.sae.org
+HJ http://www.sae.org
+HJ https://api2.sae.org
+HJ api2.sae.org
+HJ https://saemobilus-classic.sae.org
+HJ saemobilus-classic.sae.org
+DJ fullsight.org
 DJ sae.org
-DJ saemobilus.sae.org
-T SAE International
-U http://saemobilus.sae.org
-U https://saemobilus.sae.org
-U http://digitallibrary.sae.org
-# U http://www.elecpubs.sae.org  
-D sae.org
+AnonymousURL -*
 
 T American Library Association
 U http://journals.ala.org
