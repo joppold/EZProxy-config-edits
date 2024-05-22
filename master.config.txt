@@ -694,6 +694,11 @@ A 156.56.198.128-156.56.198.255
 #
 # A 208.88.104.0-208.88.107.255
 
+#  NeverProxy section
+NeverProxy acw.scopus.com
+NeverProxy rum.scopus.com
+NeverProxy acw.clinicalkey.com
+
 
 #  Ulrichsweb/Serials Solutions
 #  modified 6/27/18 per KP, RL
