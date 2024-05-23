@@ -999,13 +999,14 @@ T American Geriatrics Society
 U https://geriatricscareonline.org
 DJ geriatricscareonline.org
 
-#
-T Draw It to Know It
-U https://ditki.com/
-U https://www.drawittoknowit.com
-HJ www.ditki.com
-DJ drawittoknowit.com
+#  Updated 2024-05-23 per JDurbin
+Title Draw It To Know It 
+URL https://ditki.com
+HJ http://ditki.com
+HJ https://www.drawittoknowit.com
+HJ http://www.drawittoknowit.com
 DJ ditki.com
+DJ drawittoknowit.com
 
 #  Updated 2023-05-10 per TB
 Title American Association for Cancer Research (updated 20201103)
@@ -1050,9 +1051,16 @@ U https://journals.aai.org
 HJ journals.aai.org
 DJ jada.ada.org
 
-T American Roentgen Ray Society
-U http://www.ajronline.org
-D ajronline.org
+#  Updated 2024-05-23 per JDurbin
+Title American Journal of Roentgenology AJR (American Roentgen Ray Society) (added 20231121)
+URL https://www.ajronline.org
+HJ https://www.ajronline.org
+HJ https://ajronline.org
+HJ intl.ajronline.org
+HJ www.ajronline.org
+HJ www.arrs.org
+DJ ajronline.org
+DJ arrs.org
 
 #  Updated 2022-07-29 per JD
 Title American Society for Cell Biology (updated 20220624)
@@ -1614,12 +1622,57 @@ DJ atlasstandby.atla.com
 DJ atlaonline.com      
 DJ purl.org      
 
-T Encyclopedia Britannica
-U http://search.eb.com
-U http://academic.eb.com
-U http://www.britannica.com
-D eb.com
-D britannica.com
+#  Updated 2024-05-23 per JDurbin
+AnonymousURL +https://questservice.eb.com/api/*
+Title Britannica - Academic (Encyclopedia Britannica) (updated 20240411)
+URL https://academic.eb.com
+HJ academic.eb.com
+HJ america.eb.com
+HJ archive.school.eb.com
+HJ escolar.eb.com
+HJ global.eb.com
+HJ https://individual.eb.com
+HJ https://school.eb.com
+HJ https://secure.eb.com
+HJ individual.eb.com
+HJ learningzone.eb.com
+HJ library.eb.co.uk
+HJ library.eb.com
+HJ library.eb.com.au
+HJ moderna.eb.com
+HJ os.eb.com
+HJ quest.eb.com
+HJ school.eb.co.uk
+HJ school.eb.com
+HJ search.eb.com
+HJ secure.eb.com
+HJ sources.eb.com
+HJ spanish.eb.com
+HJ world.britannica.com
+HJ world.eb.com
+HJ www.academic.eb.com
+HJ www.america.eb.com
+HJ www.global.eb.com
+HJ www.library.eb.co.uk
+HJ www.library.eb.com
+HJ www.library.eb.com.au
+HJ www.moderna.eb.com
+HJ www.quest.eb.com
+HJ www.school.eb.com
+HJ www.search.eb.com
+HJ www.sources.eb.com
+HJ www.spanish.eb.com
+HJ www.world.britannica.com
+HJ www.world.eb.com
+DJ academic.eb.com
+DJ eb.com
+AnonymousURL -*
+NeverProxy media.web.britannica.com
+NeverProxy cache-media.britannica.com
+NeverProxy media-1.web.britannica.com
+NeverProxy media-2.web.britannica.com
+NeverProxy media-3.web.britannica.com
+NeverProxy atlas.eb.com
 
 T OCLC
 U http://firstsearch.oclc.org
@@ -1628,6 +1681,7 @@ D oclc.org
 
 #  Added 2023-05-17 per JDurbin
 #  Request made to place above JSTOR per JDurbin
+#  Updated 2024-05-23 per JDurbin
 HTTPMethod PUT
 HTTPMethod PATCH
 HTTPMethod OPTIONS
@@ -1661,7 +1715,7 @@ AnonymousURL +https://backend.constellate.org/viz/*
 AnonymousURL +https://backend.constellate.org/email
 AnonymousURL +https://backend.constellate.org/list-routes
 AnonymousURL +https://backend.constellate.org/schema
-Title Constellate (updated 20230515)
+Title Constellate (20240402)
 HTTPHeader -request -process X-Requested-With
 URL http://www.constellate.org
 HJ https://www.constellate.org
@@ -1671,6 +1725,7 @@ HJ https://auth-v3-prod.constellate.org
 HJ https://backend.constellate.org
 DJ constellate.org
 NeverProxy lab.constellate.org
+NeverProxy streamlit-prod.constellate.org
 AnonymousURL -*
 
 # J-Stor
@@ -3888,12 +3943,16 @@ T LitFinder, EssayFinder, PoemFinder, StoryFinder
 U http://www.litfinder.com
 D litfinder.com
 
-#  rechecked 7/5/12 per JJ
-T SIAM Journals
-U http://epubs.siam.org
-U http://locus.siam.org
-U https://www.siam.org
-D siam.org
+#  Updated 2024-05-23 per JDurbin
+Title Society for Industrial and Applied Mathematics (SIAM Journals) (updated 20240522)
+URL https://epubs.siam.org/
+HJ epubs.siam.org
+HJ https://epubs.siam.org
+HJ https://siam.org
+HJ https://www.siam.org
+HJ siam.org
+HJ www.siam.org
+DJ siam.org
 
 #  Edited 2022-01-30 to add https URL to stanza
 #  See announcement email from Madcad dated 7/14/14 (per GA)
