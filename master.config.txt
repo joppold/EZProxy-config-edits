@@ -737,7 +737,7 @@ HTTPHeader -response -block Content-Security-Policy
 URL https://www.dynamed.com
 HJ www.dynamed.com
 DJ dynamed.com
-Anonymous URL -*
+AnonymousURL -*
 NeverProxy ab-configuration-cdn.ebscom.com
 
 #
