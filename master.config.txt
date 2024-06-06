@@ -359,6 +359,26 @@ Replace window.open(response.replace('linksolver.ovid.com', '^plinksolver.ovid.c
 # DJ clarivate.com
 IncludeFile includes/clarivate.txt
 
+#  Moved to always proxy 2024-06-06 per OStackhouse-Kaelble
+#  Updated 2024-05-18 per JDurbin
+Title American Physiological Society (updated 20211214)
+URL https://journals.physiology.org
+HJ d2avczb82rh8fa.cloudfront.net
+HJ https://d2avczb82rh8fa.cloudfront.net
+HJ https://journals.physiology.org
+HJ https://physiology.org
+HJ https://www.physiology.org
+HJ journals.physiology.org
+HJ physiology.org
+HJ www.physiology.org
+DJ physiology.org
+
+# For problems with the proxy dropping when downloading PDFs:
+Find physiology.org\/sites
+Replace ^Pphysiology.org^\/sites
+Find physiology.org\/content\/
+Replace ^Pphysiology.org^\/content\/
+
 
 ##  END PROXY-ALL-USERS Section
 
@@ -2553,25 +2573,6 @@ D leaonline.com
 T Psycinfo
 U http://www.psycinfo.com
 D psycinfo.com
-
-#  Updated 2024-05-18 per JDurbin
-Title American Physiological Society (updated 20211214)
-URL https://journals.physiology.org
-HJ d2avczb82rh8fa.cloudfront.net
-HJ https://d2avczb82rh8fa.cloudfront.net
-HJ https://journals.physiology.org
-HJ https://physiology.org
-HJ https://www.physiology.org
-HJ journals.physiology.org
-HJ physiology.org
-HJ www.physiology.org
-DJ physiology.org
-
-# For problems with the proxy dropping when downloading PDFs:
-Find physiology.org\/sites
-Replace ^Pphysiology.org^\/sites
-Find physiology.org\/content\/
-Replace ^Pphysiology.org^\/content\/
 
 T Blackwell Synergy
 U http://www.blackwell-synergy.com
