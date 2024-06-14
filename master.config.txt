@@ -719,6 +719,7 @@ A 156.56.198.128-156.56.198.255
 NeverProxy acw.scopus.com
 NeverProxy rum.scopus.com
 NeverProxy acw.clinicalkey.com
+NeverProxy info.onetrust.com
 
 
 #  Ulrichsweb/Serials Solutions
