@@ -7818,9 +7818,10 @@ HJ https://jbe-platform.com
 DJ jbe-platform.com
 
 #  Added 2023-02-09 per KPetsche per Rachel Hinrich
+#  Updated 2024-06-24 per KPetsche
 Title PolicyMap
-URL https://iupui.policymap.com
-HJ iupui.policymap.com
+URL https://indianapolis-iu.policymap.com/
+HJ indianapolis-iu.policymap.com
 DJ policymap.com
 
 #  Updated 2024-05-21 per JDurbin
